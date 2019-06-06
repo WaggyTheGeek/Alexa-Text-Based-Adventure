@@ -9,15 +9,16 @@ package gamelogic;
  *
  * @author Waggy
  */
-public class GameLogic
-{
+public class MainGame {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args)
-    {
-        // TODO code application logic here
+    private boolean isDead;
+
+    MainGame() {
+        isDead = false;
     }
-    
+
+    public String input(String input, Room curRoom) {
+        Scanner sc = new Scanner(input);
+
+    }
 }
