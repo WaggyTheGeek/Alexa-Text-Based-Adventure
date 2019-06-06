@@ -1,0 +1,47 @@
+Event[] eventArray
+
+/*
+populate events here or something
+*/
+
+Event currentEvent = eventArray[0]
+Boolean playerAlive
+Boolean notQuitting
+Boolean gameNotWon
+
+while(playerAlive & notQuitting & gameNotWon)
+	speak currentEvent.getDialogue
+	Boolean invalidResponse = true
+	while(invalidResponse)
+		wait for response
+		String response = response
+		int nextEvent = currentEvent.getNextEvent()
+		
+		/*
+			getNextEvent returns index of next Event if response is valid
+			returns -1 if invalid response
+			returns -2 if dead
+			returns -3 if quit
+			returns -4 if game is won
+		*/
+		
+		if(nextEvent > 0)
+			invalidResponse = false
+			currentEvent = eventArray[nextEvent]
+		else if (nextEvent = -2)
+			invalidResponse = false
+			playerAlive = false
+		else if (nextEvent = -3)
+			invalidResponse = false
+			notQuitting = false
+		else if (nextEvent = -4)
+			invalidResponse = false
+			gameNotWon = false
+		end if
+	end while loop
+end while loop
+
+things that happen when game ends go here
+"u died lmao"
+"u won nice"
+"y u rage quit"
