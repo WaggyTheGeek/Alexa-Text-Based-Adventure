@@ -23,6 +23,7 @@ while(playerAlive & notQuitting & gameNotWon)
 			returns -2 if dead
 			returns -3 if quit
 			returns -4 if game is won
+			in the case of events that contain no choice they just return the proper game ending number
 		*/
 		
 		if(nextEvent > 0)

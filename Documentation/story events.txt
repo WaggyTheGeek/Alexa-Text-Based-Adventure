@@ -1,0 +1,91 @@
+/*
+Format:
+
+Index number
+Dialogue
+What it leads to; possible next events
+*/
+
+0
+You see a castle in the distance. You have heard stories of the terrifying dragon and his minion who are protecting a vast treasure inside. Go towards the castle or walk away?
+1, 2
+
+1
+You arrive at the castle. To enter you must pass through a massive wooden gate. Knock or attack?
+3, 4
+
+2
+You chicken out and walk away from the castle. You die from the Black Plague eight years later. In the years leading up to your death you are mocked for being a coward. You regret being born.
+-2 (dead)
+
+3
+You knock on the gate and you get a giant splinter in your hand. You leave the castle in pain and visit a local medic for help. Instead of treating your wound, the medic amputates your arm. You die of an infection.
+-2 (dead)
+
+4
+The gate falls apart after only one hit with your sword. It was clearly not well constructed. There is a goblin in the room. Somehow he did not see of hear you enter. Attack or try to sneak past?
+5, 6
+
+5
+You sneak past the goblin and come to a hallway with three doors leading out of it. Once is to the north, one to the east, and one to the west. Which do you go through?
+7, 8, 9
+
+6
+The goblin blocks your attack and stabs you through the chest. You die.
+-2 (dead)
+
+7
+You enter the room to the west. A trap is activated and an arrow is shot into both of your knees. You are then eaten alive by rats.
+-2 (dead)
+
+8
+You enter into a room that appears to be a wine cellar. The door slams behind you and locks. The only thing in the room is a wine rack. There are no exits. Inspect the wine rack or wait?
+10, 11
+
+9
+You enter a room with several skeletons skattered about. In the corner there is a large wolf that appears to be asleep. The only exit is a staircase leading out of the room. Sneak past the wolf or give it a belly rub?
+15, 16
+
+10
+After waiting for hours the door you came through is opened by an orc. You catch him off guard and you decapitate him. YOu go through the door. Do you want to go through the east or west door?
+7, 9
+
+11
+The wine appears to be arranged on the rack in a pattern, except for one bottle. You pick up the out of place bottle. Complete the pattern or drink the wine?
+12, 13
+
+12
+You take a sip of the wine. You then realize that it is actually a bottle of deadly poison. The skull and crossbones probably should have tipped you off. You wonder why you are so stupid. You fall down dead.
+-2 (dead)
+
+13
+You place the bottle onto the rack in the correct place to complete the pattern. A door in the wall slides open revealing a staircase. Go up the staircase or wait?
+10, 13
+
+14
+You come to a balcony overlooking the courtyard of the castle. The dragon is sleeping there on a pile of gold. Attack or search?
+17,18
+
+15
+You attempt to sneak past the wolf. He sees you and is angry that you did not give him a belly rub. He eats you.
+-2 (dead)
+
+16
+You go over to the wolf and give him a belly rub. He is a good boy. His name is Ben and he is your friend. You proceed up the staircase. You are sad that you had to leave Ben. You come to a balcony overlooking the courtyard of the castle. The dragon is sleeping there on a pile of gold. Attack or search?
+17, 18
+
+17
+You rush at the dragon and hope for the best. He wakes up and eats you. What did you think would happen?
+-2 (dead)
+
+18
+You find a mysterious potion and a length of rope. Attack or sneak attack?
+19, 20
+
+19
+You drink the potion and you turn invisible. You sneakily climb onto the dragon's back using the rope to lower yourself. Before you have a chance to attack, the dragon rolls over in his sleep and you are squished under its immense weight.
+-2 (dead)
+
+20
+You drink the potion and you turn invisible. You rush at the dragon and tie the rope around its snout before it can react to your presence. You avoid the dragon's attacks with its claws and you plunge your sword through its head. You are victorious and the treasure is yours.
+-4 (win)
