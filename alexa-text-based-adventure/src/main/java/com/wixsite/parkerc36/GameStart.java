@@ -1,4 +1,4 @@
-package gamelogic;
+package com.wixsite.parkerc36;
 
 import java.io.*;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ public class GameStart
 {
     private static boolean gameWon = false;
     
-    public static void main(String[] args) throws FileNotFoundException 
+    public static void epic() throws FileNotFoundException 
     {
         Player player = new Player();
         Eventom[] eventList = new Eventom[30];
@@ -19,7 +19,7 @@ public class GameStart
 //            System.out.println(eventList[i]);
 //        }
         
-        int currentEvent = 0;
+        int currentEvent = 1;
         // "main menu"
         
         if (true)

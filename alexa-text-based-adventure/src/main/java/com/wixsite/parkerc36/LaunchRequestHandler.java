@@ -22,12 +22,14 @@ package com.wixsite.parkerc36;
 
       @Override
       public Optional<Response> handle(HandlerInput input) {
-          String speechText = "Welcome to the Alexa Skills Kit, you can say hello";
+          
+          String speechText = "Welcome to Alexas Text Based Adventure, say play game to play?";
           return input.getResponseBuilder()
                   .withSpeech(speechText)
-                  .withSimpleCard("HelloWorld", speechText)
+                  .withSimpleCard("Alexa's Text Based Adventure", speechText)
                   .withReprompt(speechText)
                   .build();
       }
+      
 
  }

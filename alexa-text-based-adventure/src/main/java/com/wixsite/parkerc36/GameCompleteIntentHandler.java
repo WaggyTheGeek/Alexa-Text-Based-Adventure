@@ -17,32 +17,34 @@ import com.amazon.ask.model.Slot;
 
 import java.util.Optional;
 
- public class PlayGameIntentHandler implements IntentRequestHandler {
+ public class GameCompleteIntentHandler implements IntentRequestHandler {
 
       public GameStart g = new GameStart();
      
       @Override
       public boolean canHandle(HandlerInput input, IntentRequest intentRequest) {
-         return input.matches(Predicates.intentName("PlayGameIntent")) && (intentRequest.getDialogState() != DialogState.COMPLETED) && (intentRequest
-                 .getIntent().getSlots().get("ApproachCastle") == null);
+         return input.matches(Predicates.intentName("PlayGameIntent")) && intentRequest.getIntent().getSlots().get("ApproachCastle") != null;
       }
 
       @Override
       public Optional<Response> handle(HandlerInput input, IntentRequest req) {
-         String speechText;
+          Intent intent = req.getIntent();
+          Slot approachCastle = intent.getSlots().get("BigHype");
           
-         speechText = "okay b";
-         
-//          Slot updateSlot = Slot.builder()
-//                    .withName("ApproachCastle")
-//                    .withValue("away")
-//                    .build();
+          String speechText;
+          if (approachCastle.getValue() == "towards")
+          {
+              speechText = "You win";
+          }
           
-//          req.getIntent().getSlots().put("ApproachCastle", updateSlot); 
+          else
+          {
+            speechText = "You lose";
+          }
+          
           return input.getResponseBuilder()
                   .withSpeech(speechText)
                   .withSimpleCard("HelloWorld", speechText)
-                  .addDelegateDirective(req.getIntent())
                   .build();
       }
  }

@@ -1,4 +1,4 @@
-package gamelogic;
+package com.wixsite.parkerc36;
 
 public class Eventom 
 {

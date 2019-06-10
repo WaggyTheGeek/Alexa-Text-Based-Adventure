@@ -15,9 +15,10 @@ package com.wixsite.parkerc36;
       private static Skill getSkill() {
           return Skills.standard().addRequestHandlers(
                          new CancelandStopIntentHandler(),
-                         new HelloWorldIntentHandler(),
+                         new PlayGameIntentHandler(),
                          new HelpIntentHandler(),
                          new LaunchRequestHandler(),
+                         new GameCompleteIntentHandler(),
                          new SessionEndedRequestHandler()).withSkillId("amzn1.ask.skill.6fc3604e-c62d-4451-a370-4e519cadaeb8").build();
       }
 
