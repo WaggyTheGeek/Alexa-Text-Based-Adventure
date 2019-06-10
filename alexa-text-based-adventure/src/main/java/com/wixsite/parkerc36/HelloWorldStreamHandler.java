@@ -11,17 +11,14 @@ package com.wixsite.parkerc36;
 
   public class HelloWorldStreamHandler extends SkillStreamHandler {
 
+      @SuppressWarnings("unchecked")
       private static Skill getSkill() {
-          return Skills.standard()
-                  .addRequestHandlers(
+          return Skills.standard().addRequestHandlers(
                          new CancelandStopIntentHandler(),
                          new HelloWorldIntentHandler(),
                          new HelpIntentHandler(),
                          new LaunchRequestHandler(),
-                         new SessionEndedRequestHandler(),
-						 new FallbackIntentHandler())
-				  .withSkillId("alexa-text-based-adventure")
-                  .build();
+                         new SessionEndedRequestHandler()).withSkillId("amzn1.ask.skill.6fc3604e-c62d-4451-a370-4e519cadaeb8").build();
       }
 
       public HelloWorldStreamHandler() {
